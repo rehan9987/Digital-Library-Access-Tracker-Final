@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Library Access Tracker - Campus Management System</title>
+    <meta name="description" content="Digital Library Access Tracker for managing book availability, overdue fines, and borrowing analytics" />
+    <meta name="author" content="Library Management" />
+
+    <meta property="og:title" content="Library Access Tracker - Campus Management System" />
+    <meta property="og:description" content="Track book issues, returns, and generate library reports" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Lovable" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  </head>
+
+  <body>
+    <div id="root">
+      <div style="display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: system-ui, sans-serif;">
+        <div style="text-align: center;">
+          <p>Loading Library Access Tracker...</p>
+          <p style="font-size: 0.875rem; color: #666; margin-top: 0.5rem;">If this message persists, check the browser console for errors.</p>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script type="text/javascript">
+      // GitHub Pages SPA routing support
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+      
+      // Show error if app doesn't load within 5 seconds
+      setTimeout(function() {
+        var root = document.getElementById('root');
+        if (root && root.children.length === 1 && root.querySelector('p') && root.querySelector('p').textContent.includes('Loading')) {
+          root.innerHTML = '<div style="padding: 20px; font-family: system-ui, sans-serif; text-align: center;"><h1>Error Loading Application</h1><p>Please check the browser console (F12) for error messages.</p><p style="font-size: 0.875rem; color: #666;">Make sure you are running the development server with: npm run dev</p></div>';
+        }
+      }, 5000);
+    </script>
+  </body>
+</html>
